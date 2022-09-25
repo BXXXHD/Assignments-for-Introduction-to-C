@@ -12,15 +12,15 @@ int main()
 	{
 		letter_grade = 'A'; //assign the correct character to the letter_grade variable
 	}
-	else if(80 <= grade && grade < 90) // use else if and a logical and statement to determine if the number is greater than or equal to 80 and less than 90
+	else if(80 <= grade) // use else if and a logical and statement to determine if the number is greater than or equal to 80 and less than 90
 	{
 		letter_grade = 'B';
 	}
-	else if(70 <= grade && grade < 80)
+	else if(70 <= grade)
 	{
 		letter_grade = 'C';
 	}
-	else if(60 <= grade && grade < 70)
+	else if(60 <= grade)
 	{
 		letter_grade = 'D';
 	}
