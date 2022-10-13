@@ -1,5 +1,6 @@
 # include <stdio.h>
 # include <stdbool.h>
+# include <stdlib.h>
 
 //prototype all of the functions
 
@@ -53,7 +54,7 @@ int main()
 	}
 	puts("Good job!");
 	//test the countDigits() function
-	printf("%s", "Enter a positive integer: ");
+	printf("%s", "Enter an integer: ");
 	scanf("%d", &digit_int);
 	printf("%d has %d digits.\n", digit_int, countDigits(digit_int));
 	puts("All tests complete!");
@@ -155,6 +156,8 @@ int difference3 (char char1, char char2, char char3)
 int countDigits (int digit_int)
 {
 	int number_of_digits = 1; // set the initial number of digits to 1
+	
+	digit_int = abs(digit_int);
 
 	while( digit_int > 9) // as long as the ineger is greater than 9, divide by 10 and add one to the number_of_digits counter
 	{
