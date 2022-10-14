@@ -47,7 +47,7 @@ int main()
 		printf("%s", "input three characters that are spaced by three: ");
 		scanf(" %c %c %c", &char1, &char2, &char3);
 		is_spaced_three = difference3(char1, char2, char3);
-		if(is_spaced_three == false)
+		if(!is_spaced_three)
 		{
 			puts("Sorry, try again...");
 		}
