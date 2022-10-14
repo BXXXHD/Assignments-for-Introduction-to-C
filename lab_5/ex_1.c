@@ -79,7 +79,7 @@ int max2 (int a, int b)
 int max3 (int a, int b, int c)
 {
 
-	int max_ab = max2 (a, b); //use max2() function to find the greater of the first two intergers
+	int max_ab = max2(a, b); //use max2() function to find the greater of the first two intergers
 
 	if(max_ab < c) //return c if it is greater than the output of max2()
 	{
