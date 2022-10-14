@@ -2,7 +2,7 @@
 # include <stdlib.h>
 # include <time.h>
 # define SIZE 100
-# define RANGE 9 //create static constants for the array size and the range of numbers in the array
+# define RANGE 10 //create static constants for the array size and the range of numbers in the array
 
 
 int main()
@@ -15,7 +15,7 @@ int main()
 	
 	for(int i = 0; i < SIZE; i++) // for loop for every random integer
 	{
-		rnd_array[i] = (rand() % (RANGE + 1)); //create a random integer between 0 and 9 
+		rnd_array[i] = (rand() % (RANGE)); //create a random integer between 0 and 9 
 
 		ammounts[rnd_array[i]]++; //use the random integer as the index for the ammount array and add one
 
@@ -38,7 +38,7 @@ int main()
 	
 	
 
-	for(int i = 0; i <= RANGE; i++) // print the prevalance of each integer
+	for(int i = 0; i < RANGE; i++) // print the prevalance of each integer
 	{
 		printf("%d shows up %d times\n",i, ammounts[i]);
 	}
