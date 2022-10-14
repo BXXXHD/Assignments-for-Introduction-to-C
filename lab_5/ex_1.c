@@ -138,7 +138,7 @@ int drawRectangle2 (int width, int height, char symbol)
 
 bool difference3 (char char1, char char2, char char3)
 {
-	return(((char2 - char1 == 3) == true )&& ((char3 - char2 == 3) == true))); //find if the difference of char1 - char2 is 3. do the same with char3 and char2. if both are true, return true 
+	return((char2 - char1 == 3) && (char3 - char2 == 3)); //find if the difference of char1 - char2 is 3. do the same with char3 and char2. if both are true, return true 
 
 }
 
@@ -149,7 +149,7 @@ int countDigits (int digit_int)
 	
 	digit_int = abs(digit_int);
 
-	while( digit_int > 9) // as long as the ir is greater than 9, divide by 10 and add one to the number_of_digits counter
+	while( digit_int > 9) // as long as the i is greater than 9, divide by 10 and add one to the number_of_digits counter
 	{
 	digit_int = digit_int / 10;
 	number_of_digits++;
