@@ -9,7 +9,7 @@ int max3 (int a, int b, int c);
 int circleInformation (int radius);
 int drawRectangle (int width, int height);
 int drawRectangle2 (int width, int height, char symbol);
-int difference3 (char char1, char char2, char char3);
+bool difference3 (char char1, char char2, char char3);
 int countDigits (int digit_int);
 
 int main()
@@ -79,14 +79,10 @@ int max2 (int a, int b)
 int max3 (int a, int b, int c)
 {
 
-	int max_ab = max2(a, b); //use max2() function to find the greater of the first two intergers
+	int max_abc = max2(max2(a, b), c); //use max2() function to find the greater of the first two intergers
 
-	if(max_ab < c) //return c if it is greater than the output of max2()
-	{
-		return c;
-	}
 
-	return max_ab;
+	return max_abc;
 }
 
 
@@ -142,14 +138,10 @@ int drawRectangle2 (int width, int height, char symbol)
 }
 
 
-int difference3 (char char1, char char2, char char3)
+bool difference3 (char char1, char char2, char char3)
 {
-	if(((char2 - char1 == 3) == true )&& ((char3 - char2 == 3) == true)) //find if the difference of char1 - char2 is 3. do the same with char3 and char2. if both are true, return true 
-	{
-		return true;
-	}
+	return(((char2 - char1 == 3) == true )&& ((char3 - char2 == 3) == true))); //find if the difference of char1 - char2 is 3. do the same with char3 and char2. if both are true, return true 
 
-	return false;
 }
 
 
@@ -159,7 +151,7 @@ int countDigits (int digit_int)
 	
 	digit_int = abs(digit_int);
 
-	while( digit_int > 9) // as long as the ineger is greater than 9, divide by 10 and add one to the number_of_digits counter
+	while( digit_int > 9) // as long as the ieger is greater than 9, divide by 10 and add one to the number_of_digits counter
 	{
 	digit_int = digit_int / 10;
 	number_of_digits++;
