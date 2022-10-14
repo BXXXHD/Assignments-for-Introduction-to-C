@@ -149,7 +149,7 @@ int countDigits (int digit_int)
 	
 	digit_int = abs(digit_int);
 
-	while( digit_int > 9) // as long as the ieger is greater than 9, divide by 10 and add one to the number_of_digits counter
+	while( digit_int > 9) // as long as the ir is greater than 9, divide by 10 and add one to the number_of_digits counter
 	{
 	digit_int = digit_int / 10;
 	number_of_digits++;
