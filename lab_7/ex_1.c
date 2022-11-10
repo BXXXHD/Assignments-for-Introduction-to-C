@@ -34,11 +34,9 @@ bool  isPalindrome(char  word[])
 		{
 			return false;// if not return false and exit function
 		}
-		else // if so...
-		{
-			from_left++; // move each index closer to the center
-			from_right--;
-		} //repeat the test with the new index
+		from_left++; // move each index closer to the center
+		from_right--;
+		//repeat the test with the new index
 	}
 	return true; // if all tests return !false, return true
 }
